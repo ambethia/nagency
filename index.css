@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Lato|Lato");
+@import url('https://fonts.googleapis.com/css?family=Lato|Lato');
 /* Add custom CSS classes here 
  * 
  * img {
@@ -3851,12 +3851,12 @@ button.close {
  * Licensed under MIT
 */
 /* Google web fonts support */
-/*@import  url("http://fonts.googleapis.com/css?family=");*/
 /* TODO: webkit need this why ?*/
 html,
 body {
   height: 100%;
 }
+/* text-inverse is deprecated */
 .text-inverse {
   color: #ffffff;
 }
@@ -3886,29 +3886,55 @@ body {
   min-width: 100%;
 }
 .section {
-  background-size: cover;
+  position: relative;
+  padding: 35px 0;
 }
-.section > .container > .row {
-  margin: 35px 0px;
+.section .background-image {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.section .background-image.background-image-fixed {
+  background-attachment: fixed;
 }
 .section-primary {
   background-color: #337cbb !important;
   color: #ffffff;
 }
-.section-primary .text-inverse {
-  color: #333333;
+.section-primary .background-image {
+  opacity: 0.5;
 }
 .section-info {
   background-color: #5bc0de !important;
+  color: #333333;
+}
+.section-info .background-image {
+  opacity: 0.5;
 }
 .section-success {
   background-color: #5cb85c !important;
+  color: #ffffff;
+}
+.section-success .background-image {
+  opacity: 0.5;
 }
 .section-warning {
   background-color: #f0ad4e !important;
+  color: #333333;
+}
+.section-warning .background-image {
+  opacity: 0.5;
 }
 .section-danger {
   background-color: #d9534f !important;
+  color: #333333;
+}
+.section-danger .background-image {
+  opacity: 0.5;
 }
 .cover {
   margin-bottom: 0px !important;
@@ -3991,6 +4017,7 @@ body {
   background-size: cover;
   background-position: center;
 }
+.cover .cover-image.background-image-fixed,
 .cover .cover-image.cover-image-fixed {
   background-attachment: fixed;
 }
